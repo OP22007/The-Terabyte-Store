@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+
+<body style="background: #041766;background: linear-gradient(315deg, #041766, #175ED0);">
+    
+    <div class="loader_bg">
+        <div class="loader"><img src="styles/load.gif" alt="#" /></div>
+    </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="styles/logo2.jpg" id="logo" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05"
+                aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>                  
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">
+                            Register
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart">
+                            <img src="styles/cart.png" class="itemimg3" alt="">
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false"><img src=<%= locals.imgurl %> class="itemimg2" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><p class="dropdown-item" ><%= locals.name %></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container intro2">
+        <h1>Welcome to The <span style="color: yellow;">Terabyte Tech Store</span></h1>
+        <h4 style="background: -webkit-linear-gradient(0deg, #fd1d1d, #fcb045);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;font-weight: bold;">Empowering Your Digital World, One Terabyte at a Time!</h4>
+        <div class="info" style="align-self: right;">
+        <p class="tera">Welcome to Terabyte Tech, where innovation meets your daily life. Discover a world of cutting-edge electronic gadgets and tech solutions curated to elevate your digital experiences. </p>
+        <img src="styles/cp.jpg"  id="cp" alt="">
+        </div>
+        <h4>Buy <span class="auto-type"></span></h4>
+    </div>
+    <div class="prod" id="prod">
+        <h1 style="text-align: center;color: white;">Latest Products</h1>
+        <div class="box">   
+            <form action="">
+                <i class="fa fa-search"></i>
+                <input type="text" name="" class="input" id="search-item" placeholder="Search Products" onkeyup="search()">
+            </form>
+        </div>
+        <div class="cont ">
+            <!-- <div class="container car2 mx-5"> -->
+                <form action="/add_to_cart" class="container car2 mx-5" method="POST">
+                    <input type="hidden" name="id" value="1">
+                <input type="hidden" name="image" value="styles/macbook.jpg"><img src="styles/macbook.jpg" class="item" alt=""></input>
+                <input type="hidden" name="name"  value="Macbook Air M1"><h4>Macbook Air M1</h4></input>
+                <input type="hidden" name="price" value="82000"><p>Rs 82000</p></input>
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+            <!-- </div> -->
+            <!-- <div class="container car2 mx-5"> -->
+                <form action="/add_to_cart" class="container car2 mx-5"method="POST">
+                    <input type="hidden" name="id" value="2">
+                    <input type="hidden" name="image" value="styles/macpro.jpg"><img src="styles/macpro.jpg" class="item" alt=""></input>
+                    <input type="hidden" name="name"  value="Macbook Pro M2"><h4>Macbook Pro M2</h4></input>
+                    <input type="hidden" name="price" value="150000"><p>Rs 150000</p></input>
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+            <!-- </div> -->
+            <!-- <div class="container car2 mx-5"> -->
+                <form action="/add_to_cart" class="container car2 mx-5"method="POST">
+                    <input type="hidden" name="id" value="3">
+                <input type="hidden" name="image" value="styles/macbookm2.jfif"><img src="styles/macbookm2.jfif" class="item" alt=""></input>
+                <input type="hidden" name="name"  value="Macbook Air M2"><h4>Macbook Air M2</h4></input>
+                <input type="hidden" name="price" value="106999"><p>Rs 106999</p></input>
+                <input type="hidden" name="quantity" value="1">
+                <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+            <!-- </div> -->
+            </div>
+            <div class="cont">
+                <!-- <div class="container car2 mx-5"> -->
+                    <form action="/add_to_cart" class="container car2 mx-5"method="POST">
+                        <input type="hidden" name="id" value="4">
+                        <input type="hidden" name="image" value="styles/iphone.jpg"><img src="styles/iphone.jpg" class="item" alt=""></input>
+                        <input type="hidden" name="name"  value="Iphone 14 Pro Max"> <h4>Iphone 14 Pro Max</h4></input>
+                        <input type="hidden" name="price" value="168999"><p>Rs 168999</p></input>
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+                <!-- </div> -->
+            <!-- <div class="container car2 mx-5"> -->
+                <form action="/add_to_cart" class="container car2 mx-5"method="POST">
+                    <input type="hidden" name="id" value="5">
+                    <input type="hidden" name="image" value="styles/oneplus11.jpg"><img src="styles/oneplus11.jpg" class="item" alt=""></input>
+                    <input type="hidden" name="name"  value="OnePlus 11"><h4>OnePlus 11</h4></input>
+                    <input type="hidden" name="price" value="61999"><p>Rs 61999</p></input>
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+            <!-- </div> -->
+            <!-- <div class="container car2 mx-5"> -->
+                <form action="/add_to_cart" class="container car2 mx-5"method="POST">
+                    <input type="hidden" name="id" value="6">
+                    <input type="hidden" name="image" value="styles/s23 ultra.jpg"><img src="styles/s23 ultra.jpg" class="item" alt=""></input>
+                    <input type="hidden" name="name"  value="Samsung Galaxy S23 Ultra"><h4>Samsung Galaxy S23 Ultra</h4></input>
+                    <input type="hidden" name="price" value="126999"><p>Rs 126999</p></input>
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+            <!-- </div> -->
+        </div>
+            <div class="cont">
+                <!-- <div class="container car2 mx-5"> -->
+                    <form action="/add_to_cart" class="container car2 mx-5"method="POST">
+                        <input type="hidden" name="id" value="7">
+                        <input type="hidden" name="image" value="styles/ipad.jpg"><img src="styles/ipad.jpg" class="item" alt=""></input>
+                        <input type="hidden" name="name"  value="Apple 10.9 inch iPad"><h4>Apple 10.9 inch iPad</h4></input>
+                        <input type="hidden" name="price" value="42999"><p>Rs 42999</p></input>
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+                <!-- </div> -->
+            <!-- <div class="container car2 mx-5"> -->
+                <form action="/add_to_cart" class="container car2 mx-5"method="POST">
+                    <input type="hidden" name="id" value="8">
+                    <input type="hidden" name="image" value="styles/XM5.jpg"><img src="styles/XM5.jpg" class="item" alt=""></input>
+                    <input type="hidden" name="name"  value="Sony XM5 Headphones"><h4>Sony XM5 Headphones</h4></input>
+                    <input type="hidden" name="price" value="29999"><p>Rs 29999</p></input>
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+            <!-- </div> -->
+            <!-- <div class="container car2 mx-5"> -->
+                <form action="/add_to_cart" class="container car2 mx-5"method="POST">
+                    <input type="hidden" name="id" value="9">
+                    <input type="hidden" name="image" value="styles/TV.jpg"><img src="styles/TV.jpg" class="item" alt=""></input>
+                    <input type="hidden" name="name"  value="Sony Bravia XR Series"><h4>Sony Bravia XR Series</h4></input>
+                    <input type="hidden" name="price" value="126999"><p>Rs 126999</p></input>
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="submit" name="name" class="btn btn-danger" value="Add To Cart"></input>
+                </form>
+            <!-- </div> -->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        let typed = new Typed(".auto-type", {
+            strings: ["Laptops", "Mobiles", "Tablets","All Accessories"],
+            typeSpeed: 150,
+            backSpeed: 50,
+            loop: true
+        })
+        const search=()=>{
+            const box = document.getElementById("search-item").value.toUpperCase()
+            const items = document.getElementById("prod")
+            const product = document.querySelectorAll(".car2")
+            const name = items.getElementsByTagName("h4")
+            for(let i=0;i<name.length;i++){
+                let match = product[i].getElementsByTagName("h4")[0]
+                if(match){
+                    let textvalue = match.textContent || match.innerHTML
+                    console.log(textvalue.toUpperCase().indexOf(box))
+                    if(textvalue.toUpperCase().indexOf(box)>-1){
+                        product[i].style.display = ""
+                        // console.log(product[i].order)
+                    }else{
+                        product[i].style.display = "none"
+                    }
+                }
+            }
+        }
+        setTimeout(function () {
+		$('.loader_bg').fadeToggle();
+	}, 1500);
+    </script>
+</body>
+
+</html>

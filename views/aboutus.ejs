@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body style="background-color: black;color: white;">
+    <div class="loader_bg">
+        <div class="loader"><img src="styles/load.gif" alt="#" /></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="styles/logo2.jpg" id="logo" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05"
+                aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                    
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">
+                            Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">
+                            Register
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart">
+                            <img src="styles/cart.png" class="itemimg3" alt="">
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false"><img src=<%= locals.imgurl %> class="itemimg2" alt="">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><p class="dropdown-item" ><%= locals.name %></p></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>                               
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="about">
+        <div class="about-flex">
+            <div class="about-block">
+                <h3 class="about-title">About Terabyte Tech Store</h3>
+                <p class="about-text" style="text-align: center;">Welcome to Terabyte Tech Store, your ultimate destination for cutting-edge electronic gadgets and technology solutions. At Terabyte Tech, we are passionate about bringing you the latest and greatest in the world of electronics, all under one digital roof.</p>
+            </div>
+            <div class="about-block">
+            <h3 class="about-title">Our Mission</h3>
+            <p class="about-text">Our mission is simple yet profound: to provide our customers with top-quality electronic gadgets that enhance your lifestyle and empower your digital journey. We understand that technology is not just about convenience; it's about enriching your daily experiences, connecting you to the world, and inspiring you to reach new heights.</p>
+            </div>
+            <div class="about-block">
+                <h3 class="about-title">Our Commitment to Quality</h3>
+                <p class="about-text">Quality is at the core of everything we do. We carefully curate our product selection to ensure that each item meets our stringent standards for performance, durability, and innovation. Whether you're looking for the newest smartphone, state-of-the-art headphones, or the latest gaming gear, you can trust that every product in our inventory has been rigorously tested and approved by our experts.</p>
+            </div>
+            <div class="about-block">
+            <h3 class="about-title">Why Choose Terabyte Tech Store?</h3>
+            <ol>
+                <h4>Wide Range of Products: </h4>
+                <p>Terabyte Tech Store boasts a vast selection of electronic gadgets, from smartphones and tablets to smartwatches, home automation devices, and more. Whatever your tech needs may be, we have you covered.</p>
+                <h4>Competitive Prices: </h4>
+                <p>We believe that cutting-edge technology should be accessible to everyone. That's why we offer competitive prices and exclusive deals to make your tech dreams a reality without breaking the bank.</p>
+                <h4>Secure Shopping: </h4>
+                <p>Your security matters to us. Our online store is equipped with the latest encryption technology to safeguard your personal information and payment details, ensuring a worry-free shopping experience.</p>
+                <h4>Customer Satisfaction: </h4>
+                <p>Your satisfaction is our top priority. We strive to exceed your expectations, from the moment you browse our store to the day your new gadget arrives at your doorstep.</p>
+            </ol>
+            <p class="about-text">At Terabyte Tech, we are excited to be part of your tech journey. Whether you're a tech-savvy professional, a gadget enthusiast, or someone looking to upgrade your digital lifestyle, we invite you to explore our store and experience the future of electronics.
+        
+                Thank you for choosing Terabyte Tech Store as your trusted source for electronic gadgets. We look forward to serving you and helping you discover the endless possibilities that technology has to offer.
+                
+            </p>
+        </div>
+        <div class="about-block">
+            <h2 class="about-title">
+            Discover, Connect, Innovate with Terabyte Tech Store
+            </h2>
+        </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+        <script>
+            setTimeout(function () {
+		$('.loader_bg').fadeToggle();
+	}, 1500);
+        </script>
+</body>
+</html>
